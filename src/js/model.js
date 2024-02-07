@@ -38,7 +38,6 @@ export const loadRecipe = async function (id) {
     if (state.bookmarks.some(bookmark => bookmark.id === id))
       state.recipe.bookmarked = true; //sprawdzamy czy bookmark ktory ładujemy istanieje już jako zazanczony, jeśli tak to niehc bedzie zaznaczony a jak nie to nie
     else state.recipe.bookmarked = false;
-    console.log(state.recipe);
   } catch (err) {
     console.error(`${err} 😶‍🌫️😶‍🌫️😶‍🌫️`);
     throw err; //nie dokonca wiem czemu ale dzieki temu
@@ -49,7 +48,6 @@ export const loadSearchResults = async function (query) {
   try {
     state.search.query = query;
     const data = await AJAX(`${API_URL}?search=${query}&key=${KEY}`);
-    console.log(data);
     state.search.results = data.data.recipes.map(rec => {
       //wrzucamy do obkieu state dane odnosnie wyszukiwania
       return {

@@ -11,7 +11,7 @@ class BookmarksView extends View {
   }
 
   _generateMarkp() {
-    console.log(this._data); //this.data to tablica wiec musimy przejśc po elementach tej tablicy aby każdy móć wypisać
+    //this.data to tablica wiec musimy przejśc po elementach tej tablicy aby każdy móć wypisać
     return this._data
       .map(bookmark => previewView.render(bookmark, false))
       .join('');
