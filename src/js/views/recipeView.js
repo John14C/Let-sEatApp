@@ -119,7 +119,6 @@ class recipeView extends View {
   }
 
   _generateMarkupIngredient(ing) {
-    console.log(ing);
     return ` <li class="recipe__ingredient"> 
     <svg class="recipe__icon">
       <use href="${icons}#icon-check"></use>
