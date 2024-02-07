@@ -1,3 +1,3 @@
 # Let's Eat App
 
-Recipe application with custom recipe uploads.
+Mark your training around the world.
